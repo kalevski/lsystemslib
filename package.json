@@ -1,0 +1,41 @@
+{
+  "name": "lsystemslib",
+  "version": "1.0.0",
+  "description": "Library for generating L-Systems sentences",
+  "main": "src/index.js",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "npm run build:src && npm run build:tsd",
+    "build:src": "parcel build src/index.js --no-source-maps --no-cache --target js",
+    "build:tsd": "npx typescript -d --allowJs --emitDeclarationOnly --outDir ./lib src/*.js",
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalevski/lsystemslib.git"
+  },
+  "targets": {
+    "js": {
+      "context": "node",
+      "engines": {
+        "node": ">=14.x"
+      },
+      "distDir": "lib"
+    }
+  },
+  "keywords": [
+    "lsystem",
+    "l",
+    "system",
+    "library"
+  ],
+  "author": "Daniel Kalevski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kalevski/lsystemslib/issues"
+  },
+  "homepage": "https://github.com/kalevski/lsystemslib#readme",
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.2"
+  }
+}

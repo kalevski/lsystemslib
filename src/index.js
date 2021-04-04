@@ -1,4 +1,5 @@
-import Test from './Test'
+import LSystem from './LSystem'
+import LSystemConfig from './LSystemConfig'
 
-console.log('test')
+export { LSystem, LSystemConfig }
 
